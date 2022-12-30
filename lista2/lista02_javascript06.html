@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 02 Atividade 06 (JavaScript)</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        var altura = parseFloat(prompt("Digite a sua altura: "));
+        var peso = parseFloat(prompt("Digite o seu peso: "));
+
+        var imc = peso/(altura*altura);
+
+        function teste(id){
+            var cat;
+
+            if(id <= 18.5){
+                cat = "Abaixo do peso"
+            }
+            else if(id > 18.5 && id <= 25.0){
+                cat = "Saudável"
+            }
+            else if(id > 25.0 && id <= 30.0){
+                cat = "Peso em excesso"
+            }
+            else if(id > 30.0 && id <= 35.0){
+                cat = "Obesidade Grau I"
+            }
+            else if(id > 35.0 && id <= 40.0){
+                cat = "Obesidade Grau II (severa)"
+            }
+            else if(id > 40.0){
+                cat = "Obesidade Grau III (mórbida)"
+            }
+            
+            return cat;
+        }
+
+        document.write("<table border=1px>",
+        "<tr><td>IMC</td><td>Classificação</td></tr>",
+        "<tr><td>", imc.toFixed(2), "</td><td>", teste(imc), "</td></tr>",
+        "</table>");
+
+    </script>
+</body>
+</html>

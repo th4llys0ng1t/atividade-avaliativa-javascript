@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 02 Atividade 05 (JavaScript)</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+        var atleta1 = parseInt(prompt("Digite a idade do primeiro atleta: "));
+        var atleta2 = parseInt(prompt("Digite a idade do segundo atleta: "));
+        var atleta3 = parseInt(prompt("Digite a idade do terçeiro atleta: "));
+        var atleta4 = parseInt(prompt("Digite a idade do quarto atleta: "));
+        var atleta5 = parseInt(prompt("Digite a idade do quinto atleta: "));
+
+        function teste(id){
+            var cat;
+            
+            if(id >= 5 && id <= 7){
+                cat = "Infantil"
+            }
+            else if(id >= 8 && id <= 10){
+                cat = "Juvenil"
+            }
+            else if(id >= 11 && id <= 15){
+                cat = "Adolecente"
+            }
+            else if(id >= 16 && id <= 30){
+                cat = "Adulto"
+            }
+            else if(id > 30){
+                cat = "Sênior"
+            }
+            return cat;
+        }
+
+        document.write("<table border=1px><tr><td>Idade</td><td>Categoria</td></tr>",
+            "<tr><td>", atleta1, "</td><td>", teste(atleta1), "</td></tr>",
+            "<tr><td>", atleta2, "</td><td>", teste(atleta2), "</td></tr>",
+            "<tr><td>", atleta3, "</td><td>", teste(atleta3), "</td></tr>",
+            "<tr><td>", atleta4, "</td><td>", teste(atleta4), "</td></tr>",
+            "<tr><td>", atleta5, "</td><td>", teste(atleta5), "</td></tr>",
+            "</table>");
+    </script>
+    
+    
+</body>
+</html>
