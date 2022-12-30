@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lista01_atividade01</title>
+    <title>lista01_javascript06</title>
 </head>
 <body>
     <script type="text/javascript">
-        document.write("É preciso fazer todos os algoritimos para aprender!!");
+
+        var peso = parseFloat(prompt("Digite o seu peso: "));
+        var altura = parseFloat(prompt("Digite a sua altura: "));
+        var imc = peso/(altura*altura);
+
+        document.write("Seu IMC é: ", imc);
+
     </script>
+    
 </body>
 </html>
